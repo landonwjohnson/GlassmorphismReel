@@ -14,7 +14,6 @@ struct Theme {
     
     static func ellipsesTopLeading(forScheme scheme: ColorScheme) -> Color {
         let any = Color("ColorOne")
-        let dark = Color("ColorOne")
         
         switch scheme {
         case .light:
@@ -74,44 +73,73 @@ class CloudProvider: ObservableObject {
 
 struct Cloud: View {
     @StateObject var provider = CloudProvider()
-    let alignment: Alignment
+    @State var move = false
     let proxy: GeometryProxy
+
     let color: Color
 
+    let rotationStart: Double
+    let duration: Double
+    let alignment: Alignment
+    
+
+
     var body: some View {
-        Circle()
-            .fill(color)
-            .frame(height: proxy.size.height / provider.frameHeightRatio)
-            .offset(provider.offset)
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: alignment)
+            Circle()
+                .fill(color)
+                .frame(height: proxy.size.height / provider.frameHeightRatio)
+                .offset(provider.offset)
+                .rotationEffect(.init(degrees: move ? rotationStart : rotationStart + 360) )
+                .animation(Animation.linear(duration: duration).repeatForever(autoreverses: false))
+
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: alignment)
+                .opacity(0.8)
+                .onAppear {
+                    move.toggle()
+                }
+        
+     
     }
 }
 
 struct FloatingClouds: View {
     @Environment(\.colorScheme) var scheme
+    let blur: CGFloat = 60
 
     var body: some View {
+        ZStack{
+            Color("ColorFive")
+
         GeometryReader { proxy in
             ZStack {
                 
-            Color("ColorFive")
-                Cloud(alignment: .bottomTrailing,
-                               proxy: proxy,
-                               color: Theme.ellipsesBottomTrailing(forScheme: scheme))
-                         Cloud(alignment: .topTrailing,
-                               proxy: proxy,
-                               color: Theme.ellipsesTopTrailing(forScheme: scheme))
-                         Cloud(alignment: .bottomLeading,
-                               proxy: proxy,
-                               color: Theme.ellipsesBottomLeading(forScheme: scheme))
-                         Cloud(alignment: .topLeading,
-                               proxy: proxy,
-                               color: Theme.ellipsesTopLeading(forScheme: scheme))
+                Cloud(proxy: proxy,
+                      color: Theme.ellipsesBottomTrailing(forScheme: scheme),
+                      rotationStart: 0,
+                      duration: 60,
+                      alignment: .bottomTrailing)
+                Cloud(proxy: proxy,
+                      color: Theme.ellipsesTopTrailing(forScheme: scheme),
+                      rotationStart: 240,
+                      duration: 50,
+                      alignment: .topTrailing)
+                Cloud(proxy: proxy,
+                      color: Theme.ellipsesBottomLeading(forScheme: scheme),
+                      rotationStart: 120,
+                      duration: 80,
+                      alignment: .bottomLeading)
+                Cloud(proxy: proxy,
+                      color: Theme.ellipsesTopLeading(forScheme: scheme),
+                      rotationStart: 180,
+                      duration: 70,
+                      alignment: .topLeading)
             }
+            
+        
+        }.blur(radius: blur)
 
-
-
-        }.ignoresSafeArea()
+        }
+        .ignoresSafeArea()
     }
 }
 
