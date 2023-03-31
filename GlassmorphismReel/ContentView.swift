@@ -7,8 +7,64 @@
 
 import SwiftUI
 
+
+
+
+
+enum CustomFontType: String  {
+    case FontOneRegular = "Figtree-Regular"
+    case FontOneBold = "Figtree-Bold"
+    case FontTwoRegular = "PTSans-Regular"
+    case FontTwoBold = "PTSans-Bold"
+    
+}
+
+
+
+struct OnboardingLandingHeader<Content: View>: View {
+    @ViewBuilder var renderLeftContent: Content
+    
+    var text: String
+    var fontFamily = CustomFontType.FontTwoRegular
+    var body: some View {
+        
+        HStack {
+            renderLeftContent
+            Spacer()
+
+            
+
+        }
+    }}
+
+struct OnboardingLandingFooter<Content: View>: View {
+    @ViewBuilder var renderOnPressContent: Content
+    
+    var text: String
+    var fontFamily = CustomFontType.FontTwoRegular
+    var body: some View {
+        
+        HStack {
+            HStack{
+                
+                Text(text)
+                    .font(.custom(fontFamily.rawValue, size: 18))
+                
+                    .frame(maxWidth: .infinity, alignment: .leading).foregroundColor(.white)
+                
+                renderOnPressContent
+            }.frame(width: 220, alignment: .leading)
+            
+
+            Spacer()
+        }.padding([.top], 20)
+    }}
+
+
+
 struct TextButton: View {
     let text: String
+    var fontFamily = CustomFontType.FontTwoBold
     var toUpperCase = false
     var onPress: () -> Void
     var body: some View {
@@ -21,6 +77,7 @@ struct TextButton: View {
             }, label: {
                 Text(text.uppercased())
                     .foregroundColor(.white)
+                    .font(.custom(fontFamily.rawValue, size: 18))
                     .frame(alignment: .leading)
                     .bold()
             })
@@ -32,6 +89,7 @@ struct TextButton: View {
             }, label: {
                 Text(text)
                     .foregroundColor(.white)
+                    .font(.custom(fontFamily.rawValue, size: 18))
                     .frame(alignment: .leading)
                     .bold()
             })
@@ -518,7 +576,11 @@ enum UnAuthenticatedSwitchCases: String, CaseIterable {
 
 struct RegisterEmailView: View {
     @Binding var email: String
-    let setTab: (_ title: RegisterSwitchCases) -> Void
+    @Binding var password: String
+
+    let setRegisterView: (RegisterSwitchCases) -> Void
+    let setParentView: (UnAuthenticatedSwitchCases, LoginSwitchCases, RegisterSwitchCases) -> Void
+    
     
     var disabled: Bool  {
         if email.isEmpty {
@@ -532,27 +594,12 @@ struct RegisterEmailView: View {
         withAnimation(.easeIn) {  //<- here
             
             VStack {
+                
                 VStack {
-                    Text("How you will sign in")
-                        .font(.system(size: 30))
-                        .bold()
-                        .foregroundColor(Color.white)
-                        .padding([.bottom], 0)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .shadow(color: Color("ShadowColor"), radius: 2)
                     
-                    Text(
-                        "Type in a email address for signing in to your Devlander Account"
-                    )
-                    .font(.system(size: 14))
-                    .padding([.top], 1)
-                    .padding([.bottom], 20)
-                    
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    
-                    .foregroundColor(Color.white)
-                    .shadow(color: Color("ShadowColor"), radius: 2)
+                
                     VStack(spacing: 25){
+                        LogoTitleDescriptionHeading(sectionText: "Sign Up".uppercased(), title: "Enter your email", description: "Type in a email address for signing in to your Devlander Account")
                         GlassTextField(errorText: "",
                                        placeholder: "Email", text: $email )
                         
@@ -561,16 +608,7 @@ struct RegisterEmailView: View {
                     }
                     
                 }
-                HStack {
-                    HStack{
-                        
-                        Text("New to Devlander?").frame(maxWidth: .infinity, alignment: .leading).foregroundColor(.white)
-                        TextButton(text: "Sign Up", toUpperCase: true, onPress: {})
-                        
-                    }.frame(width: 220, alignment: .leading)
-                    Spacer()
-                    
-                }.padding([.top], 20)
+            
                 
                 
                 
@@ -578,6 +616,95 @@ struct RegisterEmailView: View {
                 
                 
             }.padding()
+        }
+    }
+}
+
+struct TitleText:  View {
+    var text: String
+    var fontFamily = CustomFontType.FontOneBold
+    var fontSize = 30
+    var paddingBottom = 0.0
+    
+    var body: some View {
+        Text(text)
+            .font(.custom(fontFamily.rawValue, size: CGFloat(fontSize)))
+            .foregroundColor(Color.white)
+            .padding([.top], CGFloat( 0))
+
+            .padding([.bottom], CGFloat( paddingBottom))
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .shadow(color: Color("ShadowColor"), radius: 2)
+            .border(.orange)
+    }
+}
+
+struct DetailsText: View {
+    var text: String
+    var fontFamily = CustomFontType.FontTwoRegular
+    var fontSize = 15
+    var paddingBottom = 0
+    var opacity = 0.8
+    var paddingTop = 1
+
+    var body: some  View {
+            if !text.isEmpty{
+                return Text(text)
+                    .font(.custom(fontFamily.rawValue, size: CGFloat(fontSize)))
+                    .padding([.top], CGFloat(paddingTop))
+                    .padding([.bottom], CGFloat(paddingTop))
+
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .foregroundColor(Color.white)
+                    .border(.blue)
+                    .opacity(opacity)
+
+            } else {
+                return Text("")
+            }
+    }
+
+
+}
+
+struct DescriptionText:  View {
+    var text: String
+    var fontFamily = CustomFontType.FontTwoRegular
+    var fontSize = 17
+    var paddingBottom = 30
+    var paddingTop = 1
+    
+    var body: some View {
+        Text(text)
+            .font(.custom(fontFamily.rawValue, size: CGFloat(fontSize)))
+            .padding([.top], CGFloat(paddingTop))
+            .padding([.bottom], CGFloat(paddingTop))
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .foregroundColor(Color.white)
+            .shadow(color: Color("ShadowColor"), radius: 2)
+            .border(.purple)
+
+
+    }
+}
+
+
+struct LogoTitleDescriptionHeading:  View {
+    var sectionText = ""
+
+    var title: String;
+    var description: String;
+    
+    
+    var body: some View {
+        VStack(spacing: 18) {
+            VStack{
+                DetailsText(text: sectionText)
+                TitleText(text: title)
+            }
+            
+            DescriptionText(text: description)
+            
         }
     }
 }
@@ -605,51 +732,27 @@ struct LoginEmailView: View {
         withAnimation(.easeIn) {  //<- here
             
             VStack {
-                VStack {
-                    Text("Log in with your email")
-                        .font(.system(size: 30))
-                        .bold()
-                        .foregroundColor(Color.white)
-                        .padding([.bottom], 0)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .shadow(color: Color("ShadowColor"), radius: 2)
+                
+                
+                VStack(spacing: 25){
+                    LogoTitleDescriptionHeading(title: "Log in with your email", description: "You will use this email and password to log into your accounts for all your favorite services across the Devlander companies")
+                    GlassTextField(errorText: "", placeholder: "Email", text: $email )
                     
-                    Text(
-                        "You will use this email and password to log into your accounts for all your favorite services across our platform"
-                    )
-                    .font(.system(size: 14))
-                    .padding([.top], 1)
-                    .padding([.bottom], 20)
                     
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                    SubmitButton(text: "Continue", disabled: disabled, onPress: {
+                        setLoginView(LoginSwitchCases.LoginPassword)
+                    })
                     
-                    .foregroundColor(Color.white)
-                    .shadow(color: Color("ShadowColor"), radius: 2)
-                    VStack(spacing: 25){
-                        GlassTextField(errorText: "", placeholder: "Email", text: $email )
-                        
-                        
-                        SubmitButton(text: "Continue", disabled: disabled, onPress: {
-                            setLoginView(LoginSwitchCases.LoginPassword)
-                        })
-                        
-                        
-                        
-                    }
+                    
                     
                 }
-                HStack {
-                    HStack{
-                        
-                        Text("New to Devlander?").frame(maxWidth: .infinity, alignment: .leading).foregroundColor(.white)
-                        TextButton(text: "Sign Up", toUpperCase: true, onPress: {
-                            setParentView(UnAuthenticatedSwitchCases.Register, LoginSwitchCases.LoginEmail, RegisterSwitchCases.RegisterEmail)
-                        })
-                        
-                    }.frame(width: 220, alignment: .leading)
-                    Spacer()
-                    
-                }.padding([.top], 20)
+                
+                
+                
+                OnboardingLandingFooter(renderOnPressContent: {TextButton(text: "Sign Up", toUpperCase: true, onPress: {
+                    setParentView(UnAuthenticatedSwitchCases.Register, LoginSwitchCases.LoginEmail, RegisterSwitchCases.RegisterEmail)
+                })}, text: "New to Devlander?", fontFamily: CustomFontType.FontTwoRegular)
+                
                 
                 
                 
@@ -692,6 +795,41 @@ class AppState: ObservableObject {
 //
 //}
 
+
+
+struct RegisterSwitch: View {
+    @Binding var selectedRegisterView: RegisterSwitchCases
+    
+    @State private var email = ""
+    @State private var password = ""
+    @State private var passwordAgain = ""
+
+    
+    var setParentView: (UnAuthenticatedSwitchCases, LoginSwitchCases, RegisterSwitchCases) -> Void
+    
+    var setRegisterView: (RegisterSwitchCases) -> Void
+    
+    
+    func getRegisterViewForRender(viewName: RegisterSwitchCases) -> some View {
+        switch viewName {
+        case RegisterSwitchCases.RegisterEmail:
+            return AnyView(RegisterEmailView(email: $email, password: $password, setRegisterView: setRegisterView, setParentView: setParentView))
+
+        default:
+            return AnyView(RegisterEmailView(email: $email, password: $password, setRegisterView: setRegisterView, setParentView: setParentView))
+
+        }
+    }
+    
+    
+    
+    
+    
+    
+    var body: some View {
+        getRegisterViewForRender(viewName: selectedRegisterView)
+    }
+}
 
 
 
@@ -758,8 +896,25 @@ struct LoginParentView: View {
     
     
     
+    func getParentViewForRender(parentViewName:UnAuthenticatedSwitchCases, loginViewName: LoginSwitchCases, registerViewName: RegisterSwitchCases) -> some View {
+        switch parentViewName {
+        case UnAuthenticatedSwitchCases.Login:
+            return  AnyView(LoginSwitch(selectedLoginView: $selectedLoginView, setParentView: setParentView, setLoginView: setLoginView))
+        case UnAuthenticatedSwitchCases.Register:
+            return  AnyView(RegisterSwitch(selectedRegisterView: $selectedRegisterView, setParentView: setParentView, setRegisterView: setRegisterView ))
+        default:
+            return  AnyView(LoginSwitch(selectedLoginView: $selectedLoginView, setParentView: setParentView, setLoginView: setLoginView))
+        }
+    }
     
     
+    
+    
+    
+    
+//    var body: some View {
+//    }
+//    
     
     
     var body: some View {
@@ -774,14 +929,15 @@ struct LoginParentView: View {
                 } else {
                     FloatingClouds()
                 }
-            }
-            
-            LoginSwitch(selectedLoginView: $selectedLoginView, setParentView: setParentView, setLoginView: setLoginView)
+                
+                getParentViewForRender(parentViewName: selectedParentView, loginViewName: selectedLoginView, registerViewName: selectedRegisterView)
+
+
             
         }
         
     }
-}
+             }}
 
 struct RegisterView: View {
     @Environment(\.accessibilityReduceTransparency) var reduceTransparency

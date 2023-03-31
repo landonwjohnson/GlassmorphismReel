@@ -11,7 +11,14 @@
 		4F027E2129BE774B00DEAEC9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F027E2029BE774B00DEAEC9 /* ContentView.swift */; };
 		4F027E2329BE774D00DEAEC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F027E2229BE774D00DEAEC9 /* Assets.xcassets */; };
 		4F027E2629BE774D00DEAEC9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F027E2529BE774D00DEAEC9 /* Preview Assets.xcassets */; };
-		4F90CA6329CCB420004A66CD /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F90CA6229CCB420004A66CD /* LoginViewModel.swift */; };
+		4F0D8F0E29D73D90001C873B /* Figtree-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F0D8F0029D73D8D001C873B /* Figtree-Regular.ttf */; };
+		4F0D8F0F29D73D90001C873B /* Figtree-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F0D8F0129D73D8D001C873B /* Figtree-SemiBold.ttf */; };
+		4F0D8F1129D73D90001C873B /* Figtree-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F0D8F0329D73D8E001C873B /* Figtree-Bold.ttf */; };
+		4F0D8F1429D73D90001C873B /* Figtree-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F0D8F0629D73D8E001C873B /* Figtree-Light.ttf */; };
+		4F0D8F1629D73D90001C873B /* Figtree-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F0D8F0829D73D8E001C873B /* Figtree-Italic.ttf */; };
+		4F0D8F1A29D73D90001C873B /* Figtree-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F0D8F0C29D73D90001C873B /* Figtree-Medium.ttf */; };
+		4F0D8F2029D73DA3001C873B /* PTSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F0D8F1C29D73DA2001C873B /* PTSans-Bold.ttf */; };
+		4F0D8F2329D73DA3001C873B /* PTSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F0D8F1F29D73DA2001C873B /* PTSans-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +27,14 @@
 		4F027E2029BE774B00DEAEC9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4F027E2229BE774D00DEAEC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F027E2529BE774D00DEAEC9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		4F90CA6229CCB420004A66CD /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		4F0D8F0029D73D8D001C873B /* Figtree-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Figtree-Regular.ttf"; sourceTree = "<group>"; };
+		4F0D8F0129D73D8D001C873B /* Figtree-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Figtree-SemiBold.ttf"; sourceTree = "<group>"; };
+		4F0D8F0329D73D8E001C873B /* Figtree-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Figtree-Bold.ttf"; sourceTree = "<group>"; };
+		4F0D8F0629D73D8E001C873B /* Figtree-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Figtree-Light.ttf"; sourceTree = "<group>"; };
+		4F0D8F0829D73D8E001C873B /* Figtree-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Figtree-Italic.ttf"; sourceTree = "<group>"; };
+		4F0D8F0C29D73D90001C873B /* Figtree-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Figtree-Medium.ttf"; sourceTree = "<group>"; };
+		4F0D8F1C29D73DA2001C873B /* PTSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PTSans-Bold.ttf"; sourceTree = "<group>"; };
+		4F0D8F1F29D73DA2001C873B /* PTSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PTSans-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +67,16 @@
 		4F027E1D29BE774B00DEAEC9 /* GlassmorphismReel */ = {
 			isa = PBXGroup;
 			children = (
+				4F0D8F1C29D73DA2001C873B /* PTSans-Bold.ttf */,
+				4F0D8F1F29D73DA2001C873B /* PTSans-Regular.ttf */,
+				4F0D8F0329D73D8E001C873B /* Figtree-Bold.ttf */,
+				4F0D8F0829D73D8E001C873B /* Figtree-Italic.ttf */,
+				4F0D8F0629D73D8E001C873B /* Figtree-Light.ttf */,
+				4F0D8F0C29D73D90001C873B /* Figtree-Medium.ttf */,
+				4F0D8F0029D73D8D001C873B /* Figtree-Regular.ttf */,
+				4F0D8F0129D73D8D001C873B /* Figtree-SemiBold.ttf */,
 				4F027E1E29BE774B00DEAEC9 /* GlassmorphismReelApp.swift */,
 				4F027E2029BE774B00DEAEC9 /* ContentView.swift */,
-				4F90CA6229CCB420004A66CD /* LoginViewModel.swift */,
 				4F027E2229BE774D00DEAEC9 /* Assets.xcassets */,
 				4F027E2429BE774D00DEAEC9 /* Preview Content */,
 			);
@@ -129,8 +150,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F0D8F1129D73D90001C873B /* Figtree-Bold.ttf in Resources */,
+				4F0D8F0F29D73D90001C873B /* Figtree-SemiBold.ttf in Resources */,
+				4F0D8F1629D73D90001C873B /* Figtree-Italic.ttf in Resources */,
+				4F0D8F2329D73DA3001C873B /* PTSans-Regular.ttf in Resources */,
+				4F0D8F1429D73D90001C873B /* Figtree-Light.ttf in Resources */,
+				4F0D8F2029D73DA3001C873B /* PTSans-Bold.ttf in Resources */,
 				4F027E2629BE774D00DEAEC9 /* Preview Assets.xcassets in Resources */,
 				4F027E2329BE774D00DEAEC9 /* Assets.xcassets in Resources */,
+				4F0D8F1A29D73D90001C873B /* Figtree-Medium.ttf in Resources */,
+				4F0D8F0E29D73D90001C873B /* Figtree-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,7 +194,6 @@
 			files = (
 				4F027E2129BE774B00DEAEC9 /* ContentView.swift in Sources */,
 				4F027E1F29BE774B00DEAEC9 /* GlassmorphismReelApp.swift in Sources */,
-				4F90CA6329CCB420004A66CD /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +325,7 @@
 				DEVELOPMENT_TEAM = VF723GLUG5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GlassmorphismReel/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -326,6 +355,7 @@
 				DEVELOPMENT_TEAM = VF723GLUG5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GlassmorphismReel/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
