@@ -19,6 +19,27 @@
 		4F0D8F1A29D73D90001C873B /* Figtree-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F0D8F0C29D73D90001C873B /* Figtree-Medium.ttf */; };
 		4F0D8F2029D73DA3001C873B /* PTSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F0D8F1C29D73DA2001C873B /* PTSans-Bold.ttf */; };
 		4F0D8F2329D73DA3001C873B /* PTSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F0D8F1F29D73DA2001C873B /* PTSans-Regular.ttf */; };
+		4F117A4929DE08DF002803FB /* ShouldHide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F117A4829DE08DF002803FB /* ShouldHide.swift */; };
+		4F117A4B29DE095D002803FB /* TitleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F117A4A29DE095D002803FB /* TitleText.swift */; };
+		4F117A5029DE0E7B002803FB /* GlassPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F117A4F29DE0E7B002803FB /* GlassPanel.swift */; };
+		4F117A5329DE108D002803FB /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F117A5229DE108D002803FB /* Logo.swift */; };
+		4FB2603E29DF343600EE67EF /* ChildSizeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB2603D29DF343600EE67EF /* ChildSizeReader.swift */; };
+		4FB2604129DF3D3300EE67EF /* GlassContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB2604029DF3D3300EE67EF /* GlassContainer.swift */; };
+		4FBFF81C29DC8538000C1D05 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBFF81B29DC8538000C1D05 /* User.swift */; };
+		4FBFF81E29DC8562000C1D05 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBFF81D29DC8562000C1D05 /* UserService.swift */; };
+		4FBFF82529DC8742000C1D05 /* OnboardingLandingHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBFF82429DC8742000C1D05 /* OnboardingLandingHeader.swift */; };
+		4FBFF82729DC87ED000C1D05 /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBFF82629DC87ED000C1D05 /* TextButton.swift */; };
+		4FBFF82929DC8AC7000C1D05 /* OnboardingLandingFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBFF82829DC8AC7000C1D05 /* OnboardingLandingFooter.swift */; };
+		4FBFF83129DC8C8B000C1D05 /* SubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBFF83029DC8C8B000C1D05 /* SubmitButton.swift */; };
+		4FBFF83329DC8D12000C1D05 /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBFF83229DC8D11000C1D05 /* Cloud.swift */; };
+		4FBFF83529DC8DBF000C1D05 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBFF83429DC8DBF000C1D05 /* Theme.swift */; };
+		4FBFF83929DC8E5B000C1D05 /* GlassTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBFF83829DC8E5B000C1D05 /* GlassTextField.swift */; };
+		4FBFF83D29DC8EE4000C1D05 /* FlatGlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBFF83C29DC8EE4000C1D05 /* FlatGlassView.swift */; };
+		4FBFF83F29DC8F48000C1D05 /* GlassTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBFF83E29DC8F48000C1D05 /* GlassTextFieldModifier.swift */; };
+		4FBFF84129DC8F88000C1D05 /* ErrorText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBFF84029DC8F88000C1D05 /* ErrorText.swift */; };
+		4FBFF84329DC8FBE000C1D05 /* DetailsText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBFF84229DC8FBE000C1D05 /* DetailsText.swift */; };
+		4FBFF84529DC8FE2000C1D05 /* DescriptionText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBFF84429DC8FE2000C1D05 /* DescriptionText.swift */; };
+		4FBFF84729DC900B000C1D05 /* LogoTitleDescriptionHeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBFF84629DC900B000C1D05 /* LogoTitleDescriptionHeading.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +56,27 @@
 		4F0D8F0C29D73D90001C873B /* Figtree-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Figtree-Medium.ttf"; sourceTree = "<group>"; };
 		4F0D8F1C29D73DA2001C873B /* PTSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PTSans-Bold.ttf"; sourceTree = "<group>"; };
 		4F0D8F1F29D73DA2001C873B /* PTSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PTSans-Regular.ttf"; sourceTree = "<group>"; };
+		4F117A4829DE08DF002803FB /* ShouldHide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShouldHide.swift; sourceTree = "<group>"; };
+		4F117A4A29DE095D002803FB /* TitleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleText.swift; sourceTree = "<group>"; };
+		4F117A4F29DE0E7B002803FB /* GlassPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassPanel.swift; sourceTree = "<group>"; };
+		4F117A5229DE108D002803FB /* Logo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logo.swift; sourceTree = "<group>"; };
+		4FB2603D29DF343600EE67EF /* ChildSizeReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildSizeReader.swift; sourceTree = "<group>"; };
+		4FB2604029DF3D3300EE67EF /* GlassContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassContainer.swift; sourceTree = "<group>"; };
+		4FBFF81B29DC8538000C1D05 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4FBFF81D29DC8562000C1D05 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		4FBFF82429DC8742000C1D05 /* OnboardingLandingHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingLandingHeader.swift; sourceTree = "<group>"; };
+		4FBFF82629DC87ED000C1D05 /* TextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
+		4FBFF82829DC8AC7000C1D05 /* OnboardingLandingFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingLandingFooter.swift; sourceTree = "<group>"; };
+		4FBFF83029DC8C8B000C1D05 /* SubmitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitButton.swift; sourceTree = "<group>"; };
+		4FBFF83229DC8D11000C1D05 /* Cloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
+		4FBFF83429DC8DBF000C1D05 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		4FBFF83829DC8E5B000C1D05 /* GlassTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassTextField.swift; sourceTree = "<group>"; };
+		4FBFF83C29DC8EE4000C1D05 /* FlatGlassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatGlassView.swift; sourceTree = "<group>"; };
+		4FBFF83E29DC8F48000C1D05 /* GlassTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassTextFieldModifier.swift; sourceTree = "<group>"; };
+		4FBFF84029DC8F88000C1D05 /* ErrorText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorText.swift; sourceTree = "<group>"; };
+		4FBFF84229DC8FBE000C1D05 /* DetailsText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsText.swift; sourceTree = "<group>"; };
+		4FBFF84429DC8FE2000C1D05 /* DescriptionText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionText.swift; sourceTree = "<group>"; };
+		4FBFF84629DC900B000C1D05 /* LogoTitleDescriptionHeading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoTitleDescriptionHeading.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +109,9 @@
 		4F027E1D29BE774B00DEAEC9 /* GlassmorphismReel */ = {
 			isa = PBXGroup;
 			children = (
+				4FBFF82229DC86CE000C1D05 /* UI */,
+				4FBFF81A29DC84CC000C1D05 /* Modals */,
+				4FBFF81929DC8498000C1D05 /* Views */,
 				4F0D8F1C29D73DA2001C873B /* PTSans-Bold.ttf */,
 				4F0D8F1F29D73DA2001C873B /* PTSans-Regular.ttf */,
 				4F0D8F0329D73D8E001C873B /* Figtree-Bold.ttf */,
@@ -89,6 +134,168 @@
 				4F027E2529BE774D00DEAEC9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4F117A5129DE107F002803FB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				4F117A5229DE108D002803FB /* Logo.swift */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		4FB2603C29DF342500EE67EF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4FB2603D29DF343600EE67EF /* ChildSizeReader.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		4FB2603F29DF3D2000EE67EF /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				4FB2604029DF3D3300EE67EF /* GlassContainer.swift */,
+			);
+			path = Containers;
+			sourceTree = "<group>";
+		};
+		4FBFF81929DC8498000C1D05 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4FBFF82129DC8609000C1D05 /* LLoginView */,
+				4FBFF82029DC85F2000C1D05 /* Unauthenticated */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4FBFF81A29DC84CC000C1D05 /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				4FBFF81B29DC8538000C1D05 /* User.swift */,
+				4FBFF81D29DC8562000C1D05 /* UserService.swift */,
+			);
+			path = Modals;
+			sourceTree = "<group>";
+		};
+		4FBFF82029DC85F2000C1D05 /* Unauthenticated */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Unauthenticated;
+			sourceTree = "<group>";
+		};
+		4FBFF82129DC8609000C1D05 /* LLoginView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LLoginView;
+			sourceTree = "<group>";
+		};
+		4FBFF82229DC86CE000C1D05 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4FB2603C29DF342500EE67EF /* Helpers */,
+				4FBFF82329DC86DE000C1D05 /* Components */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		4FBFF82329DC86DE000C1D05 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4FBFF82D29DC8BEC000C1D05 /* Screens */,
+				4FBFF82C29DC8BE0000C1D05 /* Organisms */,
+				4FBFF82B29DC8BC9000C1D05 /* Molecules */,
+				4FBFF82A29DC8BBB000C1D05 /* Atoms */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		4FBFF82A29DC8BBB000C1D05 /* Atoms */ = {
+			isa = PBXGroup;
+			children = (
+				4FB2603F29DF3D2000EE67EF /* Containers */,
+				4F117A5129DE107F002803FB /* Images */,
+				4FBFF83B29DC8EB5000C1D05 /* ViewModifiers */,
+				4FBFF83A29DC8E78000C1D05 /* Typography */,
+				4FBFF83229DC8D11000C1D05 /* Cloud.swift */,
+				4FBFF83429DC8DBF000C1D05 /* Theme.swift */,
+			);
+			path = Atoms;
+			sourceTree = "<group>";
+		};
+		4FBFF82B29DC8BC9000C1D05 /* Molecules */ = {
+			isa = PBXGroup;
+			children = (
+				4FBFF83729DC8E28000C1D05 /* Inputs */,
+				4FBFF82E29DC8BFF000C1D05 /* Buttons */,
+			);
+			path = Molecules;
+			sourceTree = "<group>";
+		};
+		4FBFF82C29DC8BE0000C1D05 /* Organisms */ = {
+			isa = PBXGroup;
+			children = (
+				4FBFF82429DC8742000C1D05 /* OnboardingLandingHeader.swift */,
+				4FBFF82829DC8AC7000C1D05 /* OnboardingLandingFooter.swift */,
+				4FBFF84629DC900B000C1D05 /* LogoTitleDescriptionHeading.swift */,
+			);
+			path = Organisms;
+			sourceTree = "<group>";
+		};
+		4FBFF82D29DC8BEC000C1D05 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				4FBFF82F29DC8C16000C1D05 /* LoginView */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		4FBFF82E29DC8BFF000C1D05 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				4FBFF82629DC87ED000C1D05 /* TextButton.swift */,
+				4FBFF83029DC8C8B000C1D05 /* SubmitButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		4FBFF82F29DC8C16000C1D05 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		4FBFF83729DC8E28000C1D05 /* Inputs */ = {
+			isa = PBXGroup;
+			children = (
+				4FBFF83829DC8E5B000C1D05 /* GlassTextField.swift */,
+			);
+			path = Inputs;
+			sourceTree = "<group>";
+		};
+		4FBFF83A29DC8E78000C1D05 /* Typography */ = {
+			isa = PBXGroup;
+			children = (
+				4FBFF84029DC8F88000C1D05 /* ErrorText.swift */,
+				4FBFF84229DC8FBE000C1D05 /* DetailsText.swift */,
+				4FBFF84429DC8FE2000C1D05 /* DescriptionText.swift */,
+				4F117A4A29DE095D002803FB /* TitleText.swift */,
+			);
+			path = Typography;
+			sourceTree = "<group>";
+		};
+		4FBFF83B29DC8EB5000C1D05 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				4FBFF83C29DC8EE4000C1D05 /* FlatGlassView.swift */,
+				4FBFF83E29DC8F48000C1D05 /* GlassTextFieldModifier.swift */,
+				4F117A4829DE08DF002803FB /* ShouldHide.swift */,
+				4F117A4F29DE0E7B002803FB /* GlassPanel.swift */,
+			);
+			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,8 +399,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FBFF82729DC87ED000C1D05 /* TextButton.swift in Sources */,
+				4F117A5329DE108D002803FB /* Logo.swift in Sources */,
+				4FBFF83329DC8D12000C1D05 /* Cloud.swift in Sources */,
+				4FBFF83F29DC8F48000C1D05 /* GlassTextFieldModifier.swift in Sources */,
+				4FBFF84129DC8F88000C1D05 /* ErrorText.swift in Sources */,
+				4F117A5029DE0E7B002803FB /* GlassPanel.swift in Sources */,
+				4FBFF84729DC900B000C1D05 /* LogoTitleDescriptionHeading.swift in Sources */,
+				4FBFF83D29DC8EE4000C1D05 /* FlatGlassView.swift in Sources */,
+				4FBFF82929DC8AC7000C1D05 /* OnboardingLandingFooter.swift in Sources */,
+				4F117A4B29DE095D002803FB /* TitleText.swift in Sources */,
+				4FBFF81E29DC8562000C1D05 /* UserService.swift in Sources */,
+				4FB2604129DF3D3300EE67EF /* GlassContainer.swift in Sources */,
 				4F027E2129BE774B00DEAEC9 /* ContentView.swift in Sources */,
 				4F027E1F29BE774B00DEAEC9 /* GlassmorphismReelApp.swift in Sources */,
+				4F117A4929DE08DF002803FB /* ShouldHide.swift in Sources */,
+				4FBFF84529DC8FE2000C1D05 /* DescriptionText.swift in Sources */,
+				4FBFF83129DC8C8B000C1D05 /* SubmitButton.swift in Sources */,
+				4FBFF83929DC8E5B000C1D05 /* GlassTextField.swift in Sources */,
+				4FBFF83529DC8DBF000C1D05 /* Theme.swift in Sources */,
+				4FB2603E29DF343600EE67EF /* ChildSizeReader.swift in Sources */,
+				4FBFF82529DC8742000C1D05 /* OnboardingLandingHeader.swift in Sources */,
+				4FBFF84329DC8FBE000C1D05 /* DetailsText.swift in Sources */,
+				4FBFF81C29DC8538000C1D05 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
