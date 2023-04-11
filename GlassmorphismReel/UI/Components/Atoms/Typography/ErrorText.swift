@@ -19,4 +19,5 @@ struct ErrorText: View {
             return Text("")
         }
     }
+
 }

@@ -6,15 +6,19 @@
 //
 
 import Foundation
+import Combine
 import SwiftUI
 
 struct GlassTextField: View {
     
+   
+    @State private var inFocus = false
+    @Binding var text: String
+    var placeholder = ""
     var errorText = "this is error text"
     var helperText = "Helper text"
-    var placeholder = ""
-    @State var inFocus = false
-    @Binding var text: String
+    var onReceiveCallback : (_ value: String?) -> ()
+
     
     var body: some View {
         VStack{
@@ -24,10 +28,16 @@ struct GlassTextField: View {
                 } else {
                     self.inFocus = false
                 }
-            })
+            }).onReceive(Just(text)) { text in
+                onReceiveCallback(text)
+            }
+
             .autocapitalization(.none)
             .modifier(GlassTextFieldModifier(focused: $inFocus))
-            ErrorText(errorText: errorText)
+            HStack{
+                ErrorText(errorText: errorText)
+                Spacer()
+            }
             
         }
     }

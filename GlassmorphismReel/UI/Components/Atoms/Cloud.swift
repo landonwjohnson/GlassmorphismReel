@@ -52,6 +52,8 @@ struct FloatingClouds: View {
     @Environment(\.colorScheme) var scheme
     let blur: CGFloat = 60
     
+    let baseDuration = 50.0
+    
     var body: some View {
         ZStack {
             Color("ColorFive")
@@ -62,28 +64,28 @@ struct FloatingClouds: View {
                         proxy: proxy,
                         color: Theme.ellipsesBottomTrailing(forScheme: scheme),
                         rotationStart: 0,
-                        duration: 60,
+                        duration: baseDuration - 20.0,
                         alignment: .bottomTrailing
                     )
                     Cloud(
                         proxy: proxy,
                         color: Theme.ellipsesTopTrailing(forScheme: scheme),
                         rotationStart: 240,
-                        duration: 50,
+                        duration: baseDuration  - 30.0,
                         alignment: .topTrailing
                     )
                     Cloud(
                         proxy: proxy,
                         color: Theme.ellipsesBottomLeading(forScheme: scheme),
                         rotationStart: 120,
-                        duration: 80,
+                        duration: baseDuration,
                         alignment: .bottomLeading
                     )
                     Cloud(
                         proxy: proxy,
                         color: Theme.ellipsesTopLeading(forScheme: scheme),
                         rotationStart: 180,
-                        duration: 70,
+                        duration: baseDuration - 10.0,
                         alignment: .topLeading
                     )
                 }

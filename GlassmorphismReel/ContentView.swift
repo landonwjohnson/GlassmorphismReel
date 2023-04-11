@@ -13,7 +13,12 @@ import SwiftUI
 
 
 
+func isValidEmail(_ email: String) -> Bool {
+    let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
 
+    let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+    return emailPred.evaluate(with: email)
+}
 
 
 
@@ -131,7 +136,7 @@ struct LoginPasswordView: View {
             VStack {
                 LogoTitleDescriptionHeading(sectionText: "", title: "Enter your password", description: "You will use this email and password to log into your accounts for all your favorite services across our platform")
                 
-                GlassTextField(errorText: "", placeholder: "Password", text: $password)
+                GlassTextField(text: $password, placeholder: "Password", errorText: "", onReceiveCallback: onPasswordChange)
                 
                 SubmitButton(text: "Continue", disabled: disabled, onPress: {})
                 
@@ -147,6 +152,14 @@ struct LoginPasswordView: View {
             
             
     }
+    
+    func onPasswordChange(_ value: String?){
+        if (value != nil) {
+            print(value, "here is value")
+
+        }
+    }
+    
 }
 
 enum LoginSwitchCases: String, CaseIterable {
@@ -194,8 +207,7 @@ struct RegisterEmailView: View {
                 
                     VStack(spacing: 25){
                         LogoTitleDescriptionHeading(sectionText: "Sign Up".uppercased(), title: "Enter your email", description: "Type in a email address for signing in to your Devlander Account")
-                        GlassTextField(errorText: "",
-                                       placeholder: "Email", text: $email )
+                        GlassTextField(text: $email, placeholder: "Email", errorText: "", onReceiveCallback: onEmailChange )
                         
                         
                         SubmitButton(text: "Continue", disabled: disabled, onPress: {})
@@ -210,6 +222,13 @@ struct RegisterEmailView: View {
                 
                 
             }.padding()
+        }
+    }
+    
+    func onEmailChange(_ value: String?){
+        if value != nil{
+            print(value, "here is value")
+
         }
     }
 }
@@ -227,6 +246,7 @@ struct LoginEmailView: View {
     
     @Binding var email: String
     @Binding var password: String
+    @State private var errorText = ""
     
     
     var disabled: Bool  {
@@ -246,12 +266,10 @@ struct LoginEmailView: View {
                     
                 VStack(spacing: 25){
                     LogoTitleDescriptionHeading(title: "Log in with your email", description: "You will use this email and password to log into your accounts for all your favorite services across the Devlander companies")
-                    GlassTextField(errorText: "", placeholder: "Email", text: $email )
+                    GlassTextField(text: $email, placeholder: "Email", errorText: errorText, onReceiveCallback: onEmailChange)
                     
                     
-                    SubmitButton(text: "Continue", disabled: disabled, onPress: {
-                        setLoginView(LoginSwitchCases.LoginPassword)
-                    })
+                    SubmitButton(text: "Continue", disabled: disabled, onPress: onSubmit)
                     
                     
                     
@@ -273,6 +291,22 @@ struct LoginEmailView: View {
             }
             
         }
+    }
+    
+    func onEmailChange(_ value: String?){
+        if value != nil{
+            print(value, "here is value")
+
+        }
+    }
+    
+    func onSubmit(){
+        if !isValidEmail(email){
+            errorText = "This email is not valid"
+        } else {
+            setLoginView(LoginSwitchCases.LoginPassword)
+        }
+        
     }
 }
 class AppState: ObservableObject {

@@ -26,17 +26,37 @@ struct GlassContainer:  View {
         ZStack{
             
             VStack{
-                Color(red: 255/255, green: 255/255, blue: 255/255, opacity: 0.06)
+                Color(
+                    red: 255/255,
+                    green: 255/255,
+                    blue: 255/255,
+                    opacity: 0.06)
 //                VisualEffectView(effect: UIBlurEffect(style: .systemMaterialDark))
                 
-            }.frame(height: height).clipShape(RoundedRectangle(cornerRadius: 15)).border(Color(red: 255/255, green: 255/255, blue: 255/255, opacity: 0.1)).cornerRadius(15)
+            }
+            .frame(height: height)
+            .clipShape(RoundedRectangle(cornerRadius: 15))
+            .border(
+                Color(
+                    red: 255/255,
+                    green: 255/255,
+                    blue: 255/255,
+                    opacity: 0.1
+                )
+            ).cornerRadius(15)
         }
-        
-        
-        
-        
     }
 }
+
+
+
+
+
+
+
+
+
+
 
 
 struct GlassContainer_ContentView:  View {
